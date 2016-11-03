@@ -1,0 +1,23 @@
+// Color | Principal
+$color-main: $flat-red-1;
+$color-main-darker: darken($color-main, 20%);
+$color-main-dark: darken($color-main, 10%);
+$color-main-light: lighten($color-main, 10%);
+$color-main-lighter: lighten($color-main, 20%);
+
+// Color | Blanco y Negro
+$color-light: #fff;
+$color-dark: #000;
+
+// Colores | Grises
+$color-grey: $flat-gray-2;
+$color-grey-darker: darken($color-grey, 20%);
+$color-grey-dark: darken($color-grey, 10%);
+$color-grey-light: lighten($color-grey, 10%);
+$color-grey-lighter: lighten($color-grey, 20%);
+
+// Transición
+$transition-style: 0.3s ease-in-out;
+$transition-all: all $transition-style;
+$transition-link: color $transition-style, background-color $transition-style, border-color $transition-style;
+$transition: $transition-all;

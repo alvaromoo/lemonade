@@ -1,0 +1,37 @@
+// Textos
+$font-sizes: 'highlight-large' 48 42 36,
+			 'highlight' 30 27 24,
+			 'title-large' 26 24 22,
+			 'title' 22 20 16,
+			 'title-small' 20 18 16,
+			 'subtitle-large' 17 16 15,
+			 'subtitle' 16 15 14,
+			 'subtitle-small'  14 13 10,
+			 'text-large' 12 11 10,
+			 'text' 10 9 8,
+			 'text-small' 9 8 7,
+			 'base' 8 7 6;
+
+@mixin text($size, $list: $font-sizes){
+
+	@each $type in $list{
+
+		// Variables
+		$name: nth($type, 1);
+		$desktop: nth($type, 2);
+		$tablet: nth($type, 3);
+		$phone: nth($type, 4);
+
+		@if ($name == $size){
+
+			@include font-size($desktop);
+
+			@include responsive('max-tablet'){
+				@include font-size($tablet);
+			}
+			@include responsive('max-phone'){
+				@include font-size($phone);
+			}
+		}
+	}
+}

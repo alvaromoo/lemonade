@@ -1,0 +1,37 @@
+//- Variables
+include ../_variables
+
+//- Estructura HTML
+doctype html
+html(lang=lang).no-js
+	head
+		include ../layout/_head
+
+	body
+
+		include ../partials/_ifltie8
+
+		//- Cabecera
+		header
+			include ../layout/_header
+		
+		//- Navegación
+		nav
+			include ../layout/_nav
+
+		//- Contenido principal
+		main
+			block content
+
+		//- Contenido complementario
+		aside
+			block aside
+
+		//- Pie de página
+		footer
+			include ../layout/_footer
+
+		//- JS
+		script(type='application/javascript' src=pathJs)
+
+		//- include partials/_analytics

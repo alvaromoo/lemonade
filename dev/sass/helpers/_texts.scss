@@ -1,17 +1,16 @@
-// Textos
-$font-sizes: 'highlight-large' 48 42 36,
-			 'highlight' 30 27 24,
-			 'title-large' 26 24 22,
-			 'title' 22 20 16,
-			 'title-small' 20 18 16,
-			 'subtitle-large' 17 16 15,
+// Variables
+$context: 16;
+$font-sizes: 'title' 22 20 16,
 			 'subtitle' 16 15 14,
-			 'subtitle-small'  14 13 10,
-			 'text-large' 12 11 10,
-			 'text' 10 9 8,
-			 'text-small' 9 8 7,
-			 'base' 8 7 6;
+			 'text' 10 9 8;
 
+// Mixin Font-face
+@mixin font-size($sizeValue: $context ){
+	font-size: $sizeValue + px; //fallback for old browsers
+	font-size: ((1 / $context) * $sizeValue) + rem;
+}
+
+// Mixin Font-texto
 @mixin text($size, $list: $font-sizes){
 
 	@each $type in $list{

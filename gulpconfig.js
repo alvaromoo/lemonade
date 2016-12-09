@@ -2,15 +2,24 @@
  * RUTAS *
  * ----- */
 
+ // Fichero de configuración
+var setting_file_name = 'setting',
+	setting_file = setting_file_name + '.json',
+	setting_url = './' + setting_file,
+	setting = require(setting_url),
+	data = require('gulp-data');
+
 // Rutas | Base
 var basePaths = {
 	dev: 'dev/',
 	app: 'app/',
+	tasks: '../../',
 	node: 'node_modules/'
 };
 
 // Rutas | Específicas
 module.exports = {
+	setting: basePaths.tasks + setting_file,
 	html: {
 		in: basePaths.dev + 'jade/**/!(_)*.jade',
 		watch: basePaths.dev + 'jade/**/*.jade',
@@ -18,9 +27,11 @@ module.exports = {
 	},
 	sass: {
 		in: basePaths.dev + 'sass/**/*.scss',
+		var: basePaths.dev + 'sass/variables/setting',
 		out: basePaths.app + 'css',
 		dir: basePaths.dev + 'sass/',
 		min: basePaths.app + 'css/min',
+		setting: setting_url,
 		name: 'styles.css'
 	},
 	js: {

@@ -1,8 +1,8 @@
 // Variables
 $context: 16;
-$font-sizes: 'title' 22 20 16,
-			 'subtitle' 16 15 14,
-			 'text' 10 9 8;
+$font-sizes: 'title' 26 22 18,
+			 'subtitle' 20 18 16,
+			 'text' 16 15 14;
 
 // Mixin Font-face
 @mixin font-size($sizeValue: $context ){

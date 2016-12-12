@@ -1,1 +1,14 @@
 // Estilos genéricos
+html{
+	@include text('text');
+}
+ol,
+ul{
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+button{
+	border: 0;
+}

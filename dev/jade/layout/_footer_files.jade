@@ -1,5 +1,17 @@
+//- FontAwesome
+if fontAwesome
+	link(rel='stylesheet' href=fontAwesome)
+
+//- Greensock
+if tweenMax
+	script(type='text/javascript' src=tweenMax)
+if timelineMax
+	script(type='text/javascript' src=timelineMax)
+
 //- JS
-script(type='application/javascript' src=pathJs + '?v=#{version}')
+if pathJs
+	script(type='application/javascript' src=pathJs + '?v=#{version}')
 
 //- Google Analytics
-//- include partials/_analytics
+if google_analytics
+	include ../partials/_analytics
